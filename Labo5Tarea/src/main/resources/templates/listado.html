@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Ingresar estudiantes</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<th>codigo de usuario</th>
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>Carne</th>
+			<th>Carrera</th>
+		</thead>
+		<th:block th:each="estudiante, row:${estudiantes}">
+			<tr>
+				<th th:text="${estudiante.codigoEstudiante}">
+				<th th:text="${estudiante.nombre}">
+				<th th:text="${estudiante.apellido}">
+				<th th:text="${estudiante.carne}">
+				<th th:text="${estudiante.carrera}">
+			</tr>
+		</th:block>
+	</table>
+</body>
+</html>
